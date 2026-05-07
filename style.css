@@ -1,0 +1,91 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg: #fff;
+  --text: #111;
+  --muted: #888;
+  --subtle: #aaa;
+  --underline: #ccc;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #111;
+    --text: #eee;
+    --muted: #888;
+    --subtle: #555;
+    --underline: #444;
+  }
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  padding: 5rem 1.5rem;
+}
+
+main {
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+header {
+  margin-bottom: 3.5rem;
+}
+
+h1 {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.tagline {
+  font-size: 0.875rem;
+  color: var(--muted);
+  margin-top: 0.2rem;
+}
+
+section {
+  margin-bottom: 2.5rem;
+}
+
+h2 {
+  font-size: 0.7rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--subtle);
+  margin-bottom: 0.75rem;
+}
+
+p, li {
+  font-size: 0.9rem;
+  color: var(--text);
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+li span {
+  font-weight: 500;
+}
+
+a {
+  color: var(--text);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: var(--underline);
+}
+
+a:hover {
+  text-decoration-color: var(--text);
+}
